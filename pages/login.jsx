@@ -1,3 +1,4 @@
+import { TOKEN_STRING } from "@/constants";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -42,7 +43,7 @@ function LoginPage() {
       }
 
       const data = await response.json();
-      localStorage.setItem('t', data.token);
+      localStorage.setItem(TOKEN_STRING, data.token);
       setMessage('Inicio de sesión exitoso, seras redirigido a la página principal.');
 
       setTimeout(() => {

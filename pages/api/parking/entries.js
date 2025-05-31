@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     switch (method) {
         case 'GET':
         try {
-            const entry = await ParkingEntry.findById(id);
+        const entry = await ParkingEntry.findById(id);
 
             res.status(200).json({
             success: true,
